@@ -70,6 +70,13 @@ public class CartTest extends Assertions {
     }
 
     @Test
+    public void testCheckOut() {
+        Cart cart = new Cart();
+
+        assertEquals(cart.checkOut(), "All set. Enjoy your produce ponytail guy");
+    }
+
+    @Test
     public void testChangeQuantityItemNotFound() {
         Cart cart = new Cart();
         cart.changeQuantity(new Item("apple"), 3);

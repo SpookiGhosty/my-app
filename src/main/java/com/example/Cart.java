@@ -15,6 +15,9 @@ public class Cart {
     }
 
     public Item removeItem(int index) {
+        if (index < 0 || index >= cartItems.size()) {
+            throw new IndexOutOfBoundsException();
+        }
         return cartItems.remove(index);
     }
 
@@ -22,8 +25,9 @@ public class Cart {
         cartItems.clear();
     }
 
-    public void checkOut() {
+    public String checkOut() {
         System.out.println("All set. Enjoy your produce ponytail guy");
+        return "All set. Enjoy your produce ponytail guy";
     }
 
     public void changeQuantity(Item Item, int newQuantity) {
