@@ -3,6 +3,8 @@ package com.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+//Link to the video: https://vimeo.com/1059357849/7a021a4fe1?share=copy
+
 public class CartTest extends Assertions {
 
     @Test
@@ -19,6 +21,7 @@ public class CartTest extends Assertions {
         assertThrows(NullPointerException.class, () -> cart.addItem(null));
     }
 
+    // https://vimeo.com/1059357849/7a021a4fe1?share=copy
     @Test
     public void testRemoveItem() {
         Cart cart = new Cart();
